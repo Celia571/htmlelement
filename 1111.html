@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hand-drawn Login - Sketchy Style</title>
+
+<style>
+body {
+  background: #c3d7f0; 
+  font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  width: 400px;
+  position: relative;
+  border: 3px solid #000;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 25px 5px 20px 5px/5px 20px 5px 25px;
+  transition: transform 0.2s;
+}
+
+input:focus {
+  transform: scale(1.02) rotate(-1deg);
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radio input { display: none; }
+
+.radio span {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 45% 55% 50% 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio input:checked + span::after {
+  content: "●";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 15px;
+  border: 3px solid black;
+  text-align: center;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px 40px 15px 30px/30px 15px 40px 10px;
+  transform: rotate(1deg);
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: rotate(-1deg) scale(1.05);
+  background: #f0f0f0;
+}
+
+.list {
+  margin-top: 25px;
+  border-top: 2px dashed #ccc;
+  padding-top: 15px;
+}
+
+.list div, a {
+  margin: 10px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.decoration {
+  position: absolute;
+  top: -60px;
+  right: -20px;
+  font-size: 50px;
+  transform: rotate(15deg);
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="decoration">📝</div>
+
+  <h1>Login</h1>
+
+  <div class="input-group">
+    <input type="text" placeholder="Username">
+  </div>
+
+  <div class="input-group">
+    <input type="password" placeholder="Password">
+  </div>
+
+  <div class="radio-group">
+    <label class="radio">
+      <input type="radio" name="major">
+      <span></span> Fashion
+    </label>
+    <label class="radio">
+      <input type="radio" name="major">
+      <span></span> Communication
+    </label>
+    <label class="radio">
+      <input type="radio" name="major">
+      <span></span> Other
+    </label>
+  </div>
+
+  <div class="button">CONTINUE →</div>
+
+  <div class="list">
+    <div>? Reset Password</div>
+    <div>? Look up NetID</div>
+    <a href="#">Privacy Terms</a>
+  </div>
+</div>
+
+</body>
+</html>

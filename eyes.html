@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Surreal Organs Login</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .container {
+            width: 450px;
+            background: white;
+            padding: 50px;
+            border: 4px solid black;
+            position: relative;
+            box-shadow: 15px 15px 0px black; 
+        }
+
+        h1 {
+            font-family: serif;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid black;
+        }
+
+        /* 装饰眼睛的样式 */
+        .eye-decoration {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .eye-tr { top: -30px; right: -40px; transform: rotate(20deg); font-size: 60px; }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid black;
+            background: transparent;
+            outline: none;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        .input-group::before {
+            content: "👁️";
+            position: absolute;
+            left: -40px;
+            top: 10px;
+            font-size: 24px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .radio {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .radio input { display: none; }
+
+        .radio .eye-circle {
+            width: 30px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 50% 50%;
+            margin-bottom: 5px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .radio .eye-circle::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: black;
+            border-radius: 50%;
+            top: 5px;
+            left: 10px;
+            transition: 0.3s;
+        }
+
+        .radio input:checked + .eye-circle {
+            background: black;
+        }
+        .radio input:checked + .eye-circle::after {
+            background: white;
+            transform: scale(1.5);
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 20px;
+            background: black;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 50% 50% 20% 20% / 100% 100% 30% 30%;
+            transition: 0.3s;
+        }
+
+        .continue-btn:hover {
+            background: #333;
+            letter-spacing: 10px;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .footer-links div { margin: 10px; cursor: pointer; }
+        .footer-links div:hover { text-decoration: line-through; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="eye-decoration eye-tr">👁️</div>
+
+        <h1>Observer</h1>
+
+        <div class="input-group">
+            <input type="text" placeholder="WHO ARE YOU?">
+        </div>
+
+        <div class="input-group">
+            <input type="password" placeholder="YOUR SECRET">
+        </div>
+
+        <div class="radio-group">
+            <label class="radio">
+                <input type="radio" name="org">
+                <div class="eye-circle"></div>
+                SIGHT
+            </label>
+            <label class="radio">
+                <input type="radio" name="org">
+                <div class="eye-circle"></div>
+                HEAR
+            </label>
+            <label class="radio">
+                <input type="radio" name="org">
+                <div class="eye-circle"></div>
+                VOICE
+            </label>
+        </div>
+
+        <button class="continue-btn">I AM READY</button>
+
+        <div class="footer-links">
+            <div>? Lost your identity</div>
+            <div>? New perspective</div>
+            <div style="font-size: 12px; margin-top: 20px;">Watching</div>
+        </div>
+    </div>
+
+</body>
+</html>
